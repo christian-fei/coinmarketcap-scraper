@@ -16,5 +16,5 @@ npm start -- bitcoin 20180501 20180522
 npm start -- ethereum 20180501 20180522
 ```
 
-[donate litecoin](litecoin:LbGvb3yyWpo7kqtxzREdcHek9st6tGyqmb)
-[donate bitcoin](bitcoin:35Hy1xYjsuGF47frqA9a8HJKhJQ9rcSV4j)
+<a href="litecoin:LbGvb3yyWpo7kqtxzREdcHek9st6tGyqmb">donate litecoin</a>
+<a href="bitcoin:35Hy1xYjsuGF47frqA9a8HJKhJQ9rcSV4j">donate bitcoin</a>
