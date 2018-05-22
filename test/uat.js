@@ -5,7 +5,7 @@ const {readFileSync} = require('fs')
 const {join} = require('path')
 const main = require('../')
 
-test('scrapes bitcoin historic data for May 1st, 2018', async (done) => {
+test('user gets json with market data for May 1st, 2018', async (done) => {
   await main('bitcoin', '20180501', '20180501')
 
   const res = readFileSync(join(__dirname, '..', 'samples', 'bitcoin-20180501-20180501.json'), 'utf-8')
