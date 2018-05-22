@@ -2,7 +2,11 @@ const scrape = require('./lib/scrape')
 const {writeFileSync} = require('fs')
 const {join} = require('path')
 
-main(process.argv[2], process.argv[3], process.argv[4])
+if (require.main === module) {
+  main(process.argv[2], process.argv[3], process.argv[4])
+} else {
+  module.exports = main
+}
 
 async function main (coin, start, end) {
   coin = coin || 'bitcoin'
