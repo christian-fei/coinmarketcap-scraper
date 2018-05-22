@@ -5,7 +5,8 @@ const {join} = require('path')
 
 main(process.argv[2], process.argv[3], process.argv[4])
 
-async function main (coin = 'bitcoin', start, end) {
+async function main (coin, start, end) {
+  coin = coin || 'bitcoin'
   start = start || '20180501'
   end = end || '20180531'
   const res = await got(`https://coinmarketcap.com/currencies/${coin}/historical-data/?start=${start}&end=${end}`)
