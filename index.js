@@ -1,5 +1,7 @@
 const Page = require('server-html')
 const got = require('got')
+const {writeFileSync} = require('fs')
+const {join} = require('path')
 
 main(process.argv[2], process.argv[3], process.argv[4])
 
@@ -19,6 +21,7 @@ async function main (coin = 'bitcoin', start, end) {
 
   const historic = tdsGrouped.map(toObject).filter(o => o.time)
   console.log(JSON.stringify(historic, null, 2))
+  writeFileSync(join(__dirname, 'samples', `${coin}-${start}-${end}.json`), JSON.stringify(historic, null, 2))
 
   function toObject (historic) {
     return keys.reduce((obj, key, i) => Object.assign(obj, {
