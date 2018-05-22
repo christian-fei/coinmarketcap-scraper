@@ -1,6 +1,6 @@
 /* globals test */
 
-const {equal, deepEqual} = require('assert')
+const {equal} = require('assert')
 
 const scrape = require('../lib/scrape')
 
