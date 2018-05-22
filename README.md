@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/christian-fei/coinmarketcap-scraper.svg?branch=master)](https://travis-ci.org/christian-fei/coinmarketcap-scraper)
+
 # coinmarketcap scraper
 
 smart utility to create samples of daily market data for a given `coin`, `start` and `end` time.
