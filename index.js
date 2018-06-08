@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const scrape = require('./lib/scrape')
 const {writeFileSync} = require('fs')
 const {join} = require('path')
