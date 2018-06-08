@@ -1,8 +1,6 @@
 #!/usr/bin/env node
 
 const scrape = require('./lib/scrape')
-const {writeFileSync} = require('fs')
-const {join} = require('path')
 
 if (require.main === module) {
   main(process.argv[2], process.argv[3], process.argv[4])
@@ -11,11 +9,22 @@ if (require.main === module) {
 }
 
 async function main (coin, start, end) {
-  coin = coin || 'bitcoin'
-  start = start || '20180501'
-  end = end || '20180531'
+  if (!coin || !start || !end) {
+    process.stdout.write(`Missing parameters!\n`)
+    process.stdout.write(`${usage()}\n`)
+    process.exit(1)
+  }
 
   const historic = await scrape(coin, start, end)
 
-  writeFileSync(join(__dirname, 'samples', `${coin}-${start}-${end}.json`), JSON.stringify(historic, null, 2))
+  process.stdout.write(`${JSON.stringify(historic, null, 2)}\n`)
+  process.exit(0)
+}
+
+function usage () {
+  return `
+coinmarketcap-scraper [coin] [start] [end]
+# Example
+coinmarketcap-scraper bitcoin 20180501 20180531
+  `
 }
