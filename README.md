@@ -6,14 +6,18 @@ smart utility to create samples of daily market data for a given `coin`, `start`
 
 > use at your own risk / profit
 
+# installation
+
+```
+npm install -g coinmarketcap-scraper
+```
 
 ## example
 
 ```
-npm i
-npm start -- litecoin 20180501 20180522
-npm start -- bitcoin 20180501 20180522
-npm start -- ethereum 20180501 20180522
+coinmarketcap-scraper litecoin 20180501 20180522
+coinmarketcap-scraper bitcoin 20180501 20180522
+coinmarketcap-scraper ethereum 20180501 20180522
 ```
 
 donate litecoin @ LbGvb3yyWpo7kqtxzREdcHek9st6tGyqmb
