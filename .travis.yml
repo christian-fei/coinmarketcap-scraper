@@ -1,9 +1,12 @@
 language: node_js
 node_js:
   - "9"
+script:
+- npm start -- litecoin 20180501 20180522
+- npm t
 deploy:
   provider: npm
   email: crifei93@gmail.com
   api_key: $NPM_TOKEN
-  # on:
-  #   tags: true
+  on:
+    tags: true
