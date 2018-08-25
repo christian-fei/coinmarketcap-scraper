@@ -12,13 +12,13 @@ async function main (coin, start, end) {
   if (!coin || !start || !end) {
     process.stdout.write(`Missing parameters!\n`)
     process.stdout.write(`${usage()}\n`)
-    process.exit(1)
+    throw new Error('Missing parameters')
   }
 
   const historic = await scrape(coin, start, end)
 
   process.stdout.write(`${JSON.stringify(historic, null, 2)}\n`)
-  process.exit(0)
+  return historic
 }
 
 function usage () {
