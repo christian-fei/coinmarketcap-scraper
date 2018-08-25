@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node $npm_package_main",
-    "test": "m.test"
+    "test": "mkdir -p samples; m.test"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +16,7 @@
     "server-html": "^1.0.17"
   },
   "devDependencies": {
+    "execa": "^0.11.0",
     "m.test": "0.0.57"
   }
 }

@@ -3,10 +3,10 @@
 const {equal} = require('assert')
 const {readFileSync} = require('fs')
 const {join} = require('path')
-const main = require('../')
+const execa = require('execa')
 
 test('user gets json with market data for May 1st, 2018', async (done) => {
-  await main('bitcoin', '20180501', '20180501')
+  await execa.shell('node index.js bitcoin 20180501 20180501 > samples/bitcoin-20180501-20180501.json')
 
   const res = readFileSync(join(__dirname, '..', 'samples', 'bitcoin-20180501-20180501.json'), 'utf-8')
   const historic = JSON.parse(res)
