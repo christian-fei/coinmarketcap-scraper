@@ -5,7 +5,7 @@ const scrape = require('./lib/scrape')
 if (require.main === module) {
   main(process.argv[2], process.argv[3], process.argv[4])
 } else {
-  module.exports = main
+  module.exports = scrape
 }
 
 async function main (coin, start, end) {
