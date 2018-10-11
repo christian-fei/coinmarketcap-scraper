@@ -12,7 +12,9 @@ smart utility to create samples of daily market data for a given `coin`, `start`
 npm install -g coinmarketcap-scraper
 ```
 
-## example
+or use with `npx` directly
+
+## examples
 
 ```
 coinmarketcap-scraper litecoin 20180501 20180522
