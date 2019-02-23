@@ -12,11 +12,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "got": "^8.3.1",
-    "server-html": "^1.0.17"
+    "got": "^9.6.0",
+    "server-html": "^9.0.0"
   },
   "devDependencies": {
-    "execa": "^0.11.0",
-    "m.test": "0.0.57"
+    "execa": "^1.0.0",
+    "m.test": "0.0.58"
   }
 }
