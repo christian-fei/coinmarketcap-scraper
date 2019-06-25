@@ -16,7 +16,7 @@
     "server-html": "^9.0.0"
   },
   "devDependencies": {
-    "execa": "^1.0.0",
+    "execa": "^2.0.0",
     "m.test": "0.0.58"
   }
 }
